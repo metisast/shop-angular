@@ -22,6 +22,10 @@ angular.module('myApp', ['ui.bootstrap', 'app-products', 'app-pages', 'ngRoute']
                 templateUrl: 'template/contact.html',
                 controller: 'GetStaticPages'
             })
+            .when('/product/:productId',{
+                templateUrl: 'template/product-view.html',
+                controller: 'GetProductById'
+            })
             .otherwise({
                 redirectTo: "/"
             });
